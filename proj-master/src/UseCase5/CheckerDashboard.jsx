@@ -62,13 +62,37 @@ export default function CheckerDashboard() {
 
     // Apply search filter
     if (searchQuery) {
-      const q = (searchQuery || '').toLowerCase();
-      filtered = filtered.filter(app => 
-        String(app.id || '').toLowerCase().includes(q) ||
-        String(app.customerName || '').toLowerCase().includes(q) ||
-        String(app.email || '').toLowerCase().includes(q) ||
-        String(app.loanType || '').toLowerCase().includes(q)
-      );
+      const q = (searchQuery || '').toLowerCase().trim();
+      
+      // Helper function to format date as DD-MM-YYYY for search matching
+      const formatDateForSearch = (dateString) => {
+        if (!dateString) return '';
+        try {
+          const date = new Date(dateString);
+          if (isNaN(date.getTime())) return '';
+          const day = String(date.getDate()).padStart(2, '0');
+          const month = String(date.getMonth() + 1).padStart(2, '0');
+          const year = date.getFullYear();
+          return `${day}-${month}-${year}`;
+        } catch {
+          return '';
+        }
+      };
+
+      filtered = filtered.filter(app => {
+        // Search in basic fields
+        const matchesBasic = 
+          String(app.id || '').toLowerCase().includes(q) ||
+          String(app.customerName || '').toLowerCase().includes(q) ||
+          String(app.email || '').toLowerCase().includes(q) ||
+          String(app.loanType || '').toLowerCase().includes(q);
+        
+        // Search in formatted date (DD-MM-YYYY)
+        const formattedDate = formatDateForSearch(app.submittedDate);
+        const matchesDate = formattedDate.toLowerCase().includes(q);
+        
+        return matchesBasic || matchesDate;
+      });
     }
 
     // Apply status filter
@@ -192,7 +216,7 @@ export default function CheckerDashboard() {
               <input
                 type="text"
                 className="form-control search-input"
-                placeholder="Search by name, ID, email, or loan type..."
+                placeholder="Search by name, ID, email, loan type, or date (DD-MM-YYYY)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />

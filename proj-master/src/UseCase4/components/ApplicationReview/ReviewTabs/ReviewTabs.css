@@ -1,0 +1,67 @@
+/* components/ApplicationReview/ReviewTabs/ReviewTabs.css */
+.tabs-navigation {
+  display: flex;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-light);
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.tab-button:hover {
+  color: var(--primary-blue);
+  background: rgba(52, 152, 219, 0.05);
+}
+
+.tab-button.active {
+  color: var(--primary-blue);
+  border-bottom: 3px solid var(--primary-blue);
+}
+
+.tab-content-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.tab-content {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Tabs */
+@media (max-width: 768px) {
+  .tabs-navigation {
+    flex-direction: column;
+    border-bottom: none;
+  }
+  
+  .tab-button {
+    border-bottom: 1px solid var(--border-light);
+    border-left: 3px solid transparent;
+  }
+  
+  .tab-button.active {
+    border-left: 3px solid var(--primary-blue);
+    border-bottom: 1px solid var(--border-light);
+  }
+}
+
+@media (max-width: 480px) {
+  .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}

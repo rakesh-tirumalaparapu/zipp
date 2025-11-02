@@ -1,0 +1,132 @@
+/* CheckerNotifications.css */
+
+/* Page Header */
+.page-hero {
+  background: linear-gradient(135deg, var(--sc-blue), var(--sc-deep));
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-medium);
+}
+
+.page-hero h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero .sub {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* KPI Cards */
+.kpi-card {
+  background: white;
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+.kpi-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.kpi-card p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Section Cards */
+.section-card {
+  background: white;
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-light);
+  margin-bottom: 1.5rem;
+}
+
+.section-card h5 {
+  font-weight: 600;
+  color: var(--sc-text);
+  margin-bottom: 1rem;
+}
+
+/* Notifications List */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.notification-item {
+  background: white;
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-light);
+  transition: all 0.2s ease;
+}
+
+.notification-item:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.notification-icon.maker_comment {
+  background: rgba(0, 163, 224, 0.1);
+  color: var(--sc-blue);
+}
+
+.notification-icon.loan_approved {
+  background: rgba(0, 168, 89, 0.1);
+  color: var(--sc-green);
+}
+
+.notification-icon.loan_rejected {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+/* No Data Message */
+.no-data-message {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--sc-text-light);
+}
+
+.no-data-message i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.no-data-message h5 {
+  margin-bottom: 0.5rem;
+  color: var(--sc-text-light);
+}
+
+.no-data-message p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}

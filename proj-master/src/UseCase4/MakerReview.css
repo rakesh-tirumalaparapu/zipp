@@ -1,0 +1,182 @@
+/* Document Grid and Items for Maker Review */
+.docs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.doc-item .doc-label {
+  font-weight: 500;
+  color: #334155;
+  margin: 0;
+}
+
+/* Back to Dashboard Button */
+.btn-back,
+.back-btn {
+  background: transparent;
+  border: 1px solid #198754;
+  color: #198754;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-back:hover,
+.back-btn:hover {
+  background: #198754;
+  color: #ffffff;
+  transform: translateX(-2px);
+  box-shadow: 0 2px 8px rgba(25, 135, 84, 0.3);
+}
+
+.btn-back:active,
+.back-btn:active {
+  transform: translateX(0);
+  box-shadow: 0 1px 4px rgba(25, 135, 84, 0.2);
+}
+
+.btn-back i,
+.back-btn i {
+  transition: transform 0.2s ease;
+}
+
+.btn-back:hover i,
+.back-btn:hover i {
+  transform: translateX(-2px);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  gap: 6px;
+}
+
+.status-badge.status-pending {
+  background: #fffbe6;
+  color: #d39e00;
+}
+
+.status-badge.status-approved {
+  background: #e6f7ed;
+  color: #2d8c50;
+}
+
+.status-badge.status-rejected {
+  background: #fde7e7;
+  color: #b02a37;
+}
+
+/* Details Card - Consistent styling for all tabs (Green Theme) */
+.details-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.875rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+.details-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border-color: #198754;
+}
+
+.details-card h6 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.details-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Small details card for nested content (e.g., references) */
+.details-card-small {
+  background: #f0fdf4;
+  border: 1px solid #dcfce7;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.details-card-small h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.details-card-small p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+/* Reduce spacing in tabs - compact grid */
+.card-body .row.g-3 {
+  --bs-gutter-y: 0.75rem;
+  --bs-gutter-x: 0.75rem;
+}
+
+.card-body .row.g-2 {
+  --bs-gutter-y: 0.5rem;
+  --bs-gutter-x: 0.5rem;
+}
+
+/* Reduce spacing for document section headers */
+.card-body h6.mt-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+/* Tab styling improvements */
+.nav-tabs .nav-link {
+  padding: 0.6rem 0.875rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link.active {
+  color: #198754;
+  font-weight: 600;
+  border-bottom-color: #198754;
+}
+
+.nav-tabs .nav-link:hover:not(.active) {
+  color: #157347;
+  background-color: #f0fdf4;
+}
+

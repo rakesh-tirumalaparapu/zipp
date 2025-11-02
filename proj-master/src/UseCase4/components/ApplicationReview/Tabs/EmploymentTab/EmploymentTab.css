@@ -1,0 +1,91 @@
+/* components/ApplicationReview/Tabs/EmploymentTab/EmploymentTab.css */
+.business-details {
+  background: rgba(248, 249, 250, 0.8);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.income-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.income-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.income-label {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.income-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.document-checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.checklist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.checklist-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.checklist-status.verified {
+  background: rgba(52, 168, 83, 0.1);
+  color: var(--success);
+}
+
+.checklist-status.pending {
+  background: rgba(249, 171, 0, 0.1);
+  color: var(--warning);
+}
+
+.info-item span.verified {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.info-item span.pending {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+/* Responsive Employment Tab */
+@media (max-width: 768px) {
+  .document-checklist {
+    grid-template-columns: 1fr;
+  }
+  
+  .income-breakdown {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,351 @@
+/* ================= GLOBAL STYLES ================= */
+.about-page {
+  margin-top: 70px; /* Exact navbar height - no gap */
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* ================= HERO SECTION ================= */
+.about-hero-section {
+  position: relative;
+  height: 165vh;
+  margin-top: 0; /* Remove any top margin */
+  padding-top: 0; /* Remove any top padding */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.55),
+      rgba(0, 0, 0, 0.55)
+    ),
+    url("../Images/Sc-Image2.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 4rem 2rem;
+  border-radius: 15px;
+}
+
+.about-hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.about-hero-section p {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  max-width: 700px;
+  margin: 1rem auto;
+}
+
+.stat-box h2 {
+  color: #00b894;
+  font-weight: 700;
+}
+
+.stat-box p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* ================= OUR STORY SECTION ================= */
+.our-story-section {
+  background: #fff;
+}
+
+.our-story-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.our-story-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.timeline-item {
+  text-align: center;
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 180px;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+/* ✨ Hover glow effect */
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #007bff, #00b894) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.timeline-item:hover::after {
+  opacity: 1;
+}
+
+.timeline-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-year {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #004aad;
+}
+
+/* ================= VALUES SECTION ================= */
+.values-section {
+  background-color: #f9fafc;
+}
+
+.value-card {
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Hover glow effect */
+.value-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #007bff, #00b894) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.value-card:hover::after {
+  opacity: 1;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.value-card .display-4 {
+  font-size: 3rem;
+}
+
+.value-card h5 {
+  color: #004aad;
+  margin-top: 1rem;
+}
+
+.value-card p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* ================= LEADERSHIP SECTION ================= */
+.leadership-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+/* Smaller card height */
+.leader-card {
+  border-radius: 15px;
+  transition: all 0.4s ease;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 1.8rem 1rem 1.2rem; /* ⬇ reduced bottom space */
+  margin-bottom: 1rem;
+}
+
+/* ✨ Hover glow effect */
+.leader-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #007bff, #00b894) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.leader-card:hover::after {
+  opacity: 1;
+}
+
+.leader-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* 🟢 Avatar styles (inside box, smaller margin) */
+.leader-avatar {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #004aad, #00b894);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.8rem; /* ⬇ reduced space below */
+  z-index: 5;
+  position: relative;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✨ Smooth float effect */
+.leader-card:hover .leader-avatar {
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Leader text spacing refined */
+.leader-card h5 {
+  margin-bottom: 0.3rem;
+}
+
+.leader-card p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ================= GLOBAL PRESENCE SECTION ================= */
+.global-section {
+  background: #f8f9fa;
+}
+
+.global-map-placeholder {
+  background: linear-gradient(135deg, #004aad, #00b894);
+  color: white;
+  height: 300px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✨ Hover glow effect */
+.global-map-placeholder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #007bff, #00b894) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.global-map-placeholder:hover::after {
+  opacity: 1;
+}
+
+.global-map-placeholder:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.region-item {
+  background: #eaf4ff;
+  color: #004aad;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.region-item:hover {
+  background: #004aad;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+@media (max-width: 992px) {
+  .about-hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-section {
+    min-height: 60vh;
+    padding: 3rem 1rem;
+  }
+
+  .about-hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .value-card .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .leader-avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .global-map-placeholder {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .about-hero-section p {
+    font-size: 1rem;
+  }
+}

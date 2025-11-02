@@ -1,0 +1,82 @@
+.document-card {
+  background: #ffffff;
+  border: 1px solid #e3e6ea;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.document-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.document-info h4 {
+  color: #003366;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.document-file {
+  color: #6c757d;
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.document-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.verify-btn,
+.view-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.verify-btn {
+  background-color: #00a65a;
+  color: #fff;
+}
+
+.verify-btn.pending {
+  background-color: #f1f3f4;
+  color: #003366;
+}
+
+.verify-btn:hover {
+  background-color: #009555;
+}
+
+.view-btn {
+  background-color: #003366;
+  color: #fff;
+}
+
+.view-btn:hover {
+  background-color: #00264d;
+}
+
+.document-card.verified {
+  border-left: 4px solid #00a65a;
+}
+
+.document-card.pending {
+  border-left: 4px solid #ffcc00;
+}

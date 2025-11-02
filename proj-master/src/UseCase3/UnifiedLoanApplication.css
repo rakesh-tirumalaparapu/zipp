@@ -1,0 +1,162 @@
+/* UnifiedLoanApplication.css - refined, compact, and responsive */
+
+.uc3-app { background: transparent; }
+
+.uc3-container {
+  max-width: 980px;
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.uc3-title { font-size: 1.25rem; font-weight: 600; color: #0d6efd; margin: 0 0 8px 0; text-align: center; }
+
+/* Stepper */
+.steps-inline { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 12px; overflow-x: auto; padding: 4px 0; }
+.step-item { display: flex; flex-direction: column; align-items: center; gap: 6px; color: #6c757d; position: relative; }
+.step-circle { width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: #e9f1ff; color: #0d6efd; font-weight: 700; font-size: 1rem; flex: 0 0 auto; }
+.step-item.active .step-circle { background: #0d6efd; color: #fff; }
+.step-item.completed .step-circle { background: #198754; color: #fff; }
+.step-label { font-size: 0.85rem; white-space: nowrap; }
+.step-item.active .step-label { color: #0d6efd; font-weight: 600; }
+.step-connector { height: 2px; width: 44px; background: #d0daf5; align-self: center; }
+.step-item.completed + .step-item .step-connector { background: #0d6efd; }
+
+/* Cards and grids */
+.section-card { background: #fff; border: 1px solid #e9ecef; border-radius: 10px; padding: 10px; margin-bottom: 10px; }
+.section-title { margin: 0 0 6px 0; font-size: 0.95rem; font-weight: 600; color: #2c3e50; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+
+/* Fields */
+.form-field { display: flex; flex-direction: column; gap: 5px; }
+.form-label { font-size: 0.8rem; font-weight: 600; color: #495057; margin-bottom: 1px; }
+.form-control { padding: 7px 9px; border: 1px solid #dee2e6; border-radius: 8px; font-size: 0.85rem; }
+.form-control:focus { border-color: #0d6efd; box-shadow: 0 0 0 0.2rem rgba(13,110,253,.15); outline: none; }
+.is-invalid { border-color: #dc3545 !important; }
+.invalid-feedback { color: #dc3545; font-size: 0.85rem; }
+
+/* Review */
+.review-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.review-item { display: flex; justify-content: space-between; gap: 12px; padding: 6px 8px; border-bottom: 1px dashed #e9ecef; }
+.review-key { color: #6c757d; font-size: 0.85rem; text-transform: capitalize; }
+.review-value { color: #212529; font-weight: 500; }
+.submit-area { display: flex; justify-content: flex-end; }
+
+/* Navigation */
+.nav-actions { display: flex; align-items: center; margin-top: 8px; }
+.nav-back { margin-right: auto; }
+.nav-next { margin-left: auto; }
+
+/* Buttons piggyback on Bootstrap but add small tweaks */
+.btn { border-radius: 8px; font-weight: 500; }
+
+/* Custom primary button matching UC3 blue theme */
+.uc3-app .btn-primary-custom { 
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: #ffffff;
+}
+.uc3-app .btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13,110,253,0.35);
+  color: #ffffff;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .review-grid { grid-template-columns: 1fr; }
+  .step-connector { width: 24px; }
+}
+
+@media (max-width: 768px) {
+  .uc3-container { padding: 8px; }
+  .steps-inline { gap: 4px; padding: 2px 0; }
+  .step-circle { width: 32px; height: 32px; font-size: 0.85rem; }
+  .step-label { font-size: 0.75rem; }
+  .step-connector { width: 16px; }
+  .section-card { padding: 8px; }
+  .form-control { padding: 6px 8px; font-size: 0.85rem; }
+  .nav-actions { flex-wrap: wrap; gap: 8px; }
+  .btn-primary-custom { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .uc3-title { font-size: 1.1rem; }
+  .steps-inline { gap: 2px; }
+  .step-circle { width: 28px; height: 28px; font-size: 0.75rem; }
+  .step-label { display: none; }
+  .step-connector { width: 8px; }
+}
+
+/* Prevent content overflow inside small parents */
+.uc3-container, .section-card, .grid-2, .review-grid { min-width: 0; }
+*, *::before, *::after { box-sizing: border-box; }
+
+/* File link styling */
+.review-item .file-link {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.review-item .file-link:hover {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.review-item .file-link:active {
+  color: #004085;
+}
+
+/* File preview modal overlay */
+.file-preview-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+.file-preview-container {
+  background-color: white;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

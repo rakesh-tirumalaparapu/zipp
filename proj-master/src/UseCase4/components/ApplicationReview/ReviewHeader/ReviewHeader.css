@@ -1,0 +1,89 @@
+/* components/ApplicationReview/ReviewHeader/ReviewHeader.css */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    background: transparent;
+    border: 1px solid #198754;
+    color: #198754;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-button:hover {
+    background: #198754;
+    color: #ffffff;
+    transform: translateX(-2px);
+    box-shadow: 0 2px 8px rgba(25, 135, 84, 0.3);
+}
+
+.back-button:active {
+    transform: translateX(0);
+    box-shadow: 0 1px 4px rgba(25, 135, 84, 0.2);
+}
+
+.header-center {
+    text-align: center;
+}
+
+.header-center h2 {
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+    font-size: 24px;
+}
+
+.application-id {
+    color: #7f8c8d;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.customer-info {
+    text-align: right;
+}
+
+.customer-name {
+    color: #2c3e50;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.customer-details {
+    color: #7f8c8d;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .review-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .customer-info {
+        text-align: center;
+    }
+    
+    .header-center h2 {
+        font-size: 20px;
+    }
+    
+    .customer-name {
+        font-size: 16px;
+    }
+}

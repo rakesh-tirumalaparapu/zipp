@@ -1,0 +1,538 @@
+.nav-tabs .nav-item,
+.nav-tabs .nav-item:hover,
+.nav-tabs .nav-item:focus,
+.nav-tabs .nav-item:active {
+  background: transparent !important; /* no outer background on hover */
+}
+
+/* CheckerApplicationReview.css */
+
+/* Page Header */
+.page-hero {
+  background: linear-gradient(135deg, var(--sc-blue), var(--sc-deep));
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-medium);
+}
+
+.page-hero h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.page-hero .sub {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  border-bottom: 2px solid var(--sc-border);
+  margin-bottom: 1rem;
+  margin-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  display: flex;
+  flex-wrap: nowrap; /* keep tabs in a single line */
+  overflow-x: auto; /* allow horizontal scroll if needed */
+  overflow-y: hidden;
+  background: transparent !important; /* prevent any outer tint */
+  align-items: center; /* vertically center tabs */
+  min-height: 48px; /* ensure consistent height */
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: var(--sc-text-light);
+  font-weight: 500;
+  padding: 0.65rem 1rem; /* balanced padding */
+  border-radius: 0;
+  transition: all 0.2s ease;
+  white-space: nowrap; /* prevent text wrapping */
+  font-size: 0.9rem; /* readable font size */
+  background: transparent;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center; /* vertically center content */
+  justify-content: center; /* horizontally center content */
+  height: 100%;
+}
+
+/* Ensure icons inherit color for consistent hover */
+.nav-tabs .nav-link i { color: inherit; }
+
+/* Clean, consistent hover/focus colors */
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  border-color: transparent !important;
+  color: var(--sc-blue) !important;
+  background: rgba(0, 163, 224, 0.08) !important;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Active state unified */
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: var(--sc-blue) !important;
+  background: #ffffff !important;
+  border-color: transparent transparent var(--sc-blue) !important;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  font-weight: 600;
+}
+
+/* Remove Bootstrap default borders on all states */
+.nav-tabs .nav-link,
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link.active {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.nav-tabs .nav-link i {
+  margin-right: 0.5rem;
+}
+
+/* Section Cards */
+.section-card {
+  background: white;
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-light);
+  margin-bottom: 1.5rem;
+}
+
+/* Reduce padding for tab container */
+.section-card .nav-tabs {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Adjust padding for tab section card - center tabs vertically */
+.section-card:has(.nav-tabs) {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Alternative for browsers that don't support :has() */
+.section-card > .nav-tabs {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-card h5 {
+  font-weight: 600;
+  color: var(--sc-text);
+  margin-bottom: 1rem;
+}
+
+/* Detail Items */
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--sc-text-light);
+  margin: 0;
+}
+
+.detail-value {
+  font-weight: 500;
+  color: var(--sc-text);
+}
+
+/* Details Card - Consistent styling for all tabs */
+.details-card {
+  background: #ffffff;
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  padding: 0.875rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+.details-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
+}
+
+.details-card h6 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--sc-text-light);
+  margin: 0 0 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.details-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Small details card for nested content (e.g., references) */
+.details-card-small {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.details-card-small:last-child {
+  margin-bottom: 0;
+}
+
+.details-card-small h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--sc-text-light);
+  margin: 0 0 0.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.details-card-small p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+/* CIBIL Score */
+.cibil-score {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.cibil-score.good {
+  background: rgba(0, 168, 89, 0.1);
+  color: var(--sc-green);
+}
+
+.cibil-score.fair {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.cibil-score.poor {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+/* CIBIL Score Band */
+.cibil-band {
+  margin-top: 0.5rem;
+  background: linear-gradient(90deg, #dc3545 0%, #ffc107 33%, #17a2b8 66%, var(--sc-green) 100%);
+  height: 12px;
+  border-radius: 999px;
+  position: relative;
+}
+
+.cibil-band .marker {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background: var(--sc-blue);
+}
+
+.cibil-legend {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--sc-text-light);
+  margin-top: 0.35rem;
+}
+
+/* Document Items */
+.document-item {
+  background: white;
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-light);
+  transition: all 0.2s ease;
+}
+
+/* Document Grid and Items for Maker/Checker Review */
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .docs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.doc-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  min-height: 50px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.doc-item:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.doc-item .doc-label {
+  font-weight: 500;
+  color: #334155;
+  margin: 0;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.document-item:hover {
+  box-shadow: var(--shadow-light); /* remove elevation */
+  transform: none; /* no lift on hover */
+}
+
+.document-item.uploaded {
+  border-left: 4px solid var(--sc-green);
+}
+
+.document-item.pending {
+  border-left: 4px solid #ffc107;
+  background: rgba(255, 193, 7, 0.05);
+}
+
+.document-name {
+  font-weight: 500;
+  color: var(--sc-text);
+  margin-bottom: 0.25rem;
+}
+
+.document-status {
+  margin-bottom: 0.5rem;
+}
+
+.document-view-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+/* Maker Comments */
+.maker-comments-section {
+  padding: 1rem 0;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comment-item {
+  background: white;
+  border: 1px solid var(--sc-border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-light);
+}
+
+.comment-item.info {
+  border-left: 4px solid var(--sc-blue);
+}
+
+.comment-item.success {
+  border-left: 4px solid var(--sc-green);
+}
+
+.comment-item.warning {
+  border-left: 4px solid #ffc107;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.comment-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.comment-maker {
+  font-weight: 600;
+  color: var(--sc-text);
+}
+
+.comment-time {
+  font-size: 0.875rem;
+  color: var(--sc-text-light);
+}
+
+.comment-type-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.comment-type-badge.info {
+  background: rgba(0, 163, 224, 0.1);
+  color: var(--sc-blue);
+}
+
+.comment-type-badge.success {
+  background: rgba(0, 168, 89, 0.1);
+  color: var(--sc-green);
+}
+
+.comment-type-badge.warning {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.comment-content {
+  color: var(--sc-text);
+  line-height: 1.5;
+}
+
+/* Action Buttons */
+.sticky-actions {
+  position: sticky;
+  bottom: 2rem;
+  z-index: 100;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* Confirmation Modal */
+.confirmation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.confirmation-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-heavy);
+  max-width: 500px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.confirmation-header {
+  background: var(--sc-light);
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--sc-border);
+}
+
+.confirmation-body {
+  padding: 1.5rem;
+}
+
+.confirmation-footer {
+  padding: 1rem 1.5rem;
+  background: var(--sc-light);
+  border-top: 1px solid var(--sc-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Comment Validation */
+.comment-validation {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.comment-validation i {
+  font-size: 0.75rem;
+}
+
+/* Reduce spacing in tabs - compact grid */
+.section-card .row.g-3 {
+  --bs-gutter-y: 0.75rem;
+  --bs-gutter-x: 0.75rem;
+}
+
+.section-card .row.g-2 {
+  --bs-gutter-y: 0.5rem;
+  --bs-gutter-x: 0.5rem;
+}
+
+/* Reduce spacing for document section headers */
+.section-card h6.mt-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--sc-text);
+  font-size: 0.95rem;
+}
+
+/* Reduce tab padding for more compact layout */
+.nav-tabs .nav-link {
+  padding: 0.6rem 0.875rem !important;
+  font-size: 0.875rem;
+}

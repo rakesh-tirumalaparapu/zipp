@@ -1,0 +1,249 @@
+/* CheckerNavbar.css */
+
+/* Navbar Styles */
+.navbar-sc {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e9ecef;
+  padding: 0.45rem 0; /* smaller navbar height */
+}
+
+.navbar-sc .navbar-brand {
+  font-weight: 600;
+  color: var(--sc-text);
+  text-decoration: none;
+}
+
+.navbar-sc .navbar-brand img {
+  height: 65px; /* standardized logo size */
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Standard Chartered Logo */
+.sc-logo {
+  height: 65px !important; /* standardized logo size - matches maker and customer */
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-sc .nav-link {
+  padding: 0.5rem 1rem;
+  color: var(--sc-text-light);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  margin: 0 0.25rem;
+  background: transparent !important;
+}
+
+.navbar-sc .nav-link:hover {
+  color: var(--sc-blue) !important;
+  background: transparent !important;
+}
+
+.navbar-sc .nav-link.active {
+  color: var(--sc-blue) !important;
+  background: transparent !important; /* remove tinted background */
+  font-weight: 600;
+  border-bottom: 2px solid var(--sc-blue) !important;
+}
+
+/* Ensure active state never turns green across any state variants */
+.navbar-sc .nav-link.active,
+.navbar-sc .nav-link.active:focus,
+.navbar-sc .nav-link.active:visited,
+.navbar-sc .nav-link.active:active {
+  color: var(--sc-blue) !important;
+  background: transparent !important;
+  border-bottom-color: var(--sc-blue) !important;
+  outline: none !important;
+  text-decoration: none;
+}
+
+/* Neutralize accidental success/green classes on active link */
+.navbar-sc .nav-link.active.text-success,
+.navbar-sc .nav-link.text-success.active {
+  color: var(--sc-blue) !important;
+}
+
+/* Icons inside active links inherit the same color */
+.navbar-sc .nav-link.active i { color: inherit !important; }
+
+/* Ensure no background appears on focus/active states */
+.navbar-sc .nav-link,
+.navbar-sc .nav-link:hover,
+.navbar-sc .nav-link:focus,
+.navbar-sc .nav-link:active {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-actions .nav-link {
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-actions .nav-link:hover {
+  background: none;
+  transform: scale(1.05);
+}
+
+.navbar-actions .profile-menu {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Notification Bell */
+.nav-link i.bi-bell {
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover i.bi-bell {
+  color: var(--sc-blue) !important;
+  transform: scale(1.05);
+  background: none;
+}
+
+/* Profile Menu */
+.profile-menu {
+  position: relative;
+}
+
+.profile-icon-btn {
+  border: none !important;
+  background: none !important;
+  padding: 0;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon-btn:hover {
+  transform: scale(1.05);
+}
+
+.profile-avatar {
+  width: 34px;  /* smaller avatar */
+  height: 34px;
+  background: linear-gradient(135deg, #0070ba, #004d7a);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.profile-icon-btn:hover .profile-avatar {
+  background: linear-gradient(135deg, #004d7a, #003d5c);
+  box-shadow: 0 2px 8px rgba(0, 112, 186, 0.3);
+}
+
+.profile-dropdown {
+  min-width: 200px; /* Increased width for better button spacing */
+  right: 0; /* anchor to right */
+  left: auto; /* align to right side */
+  top: calc(100% + 8px); /* appear below avatar */
+  margin-right: 0;
+  border: 1px solid var(--sc-border);
+  box-shadow: var(--shadow-medium);
+  border-radius: 12px;
+  padding: 0.5rem 0; /* Added padding for better spacing */
+  overflow: hidden;
+  z-index: 1051; /* Keep above navbar and page content */
+  animation: sc-dropdown-in 140ms ease-out;
+  max-width: min(280px, 90vw); /* prevent overflow horizontally */
+  max-height: min(70vh, 480px); /* prevent vertical overflow */
+  overflow-y: auto; /* scroll if needed */
+}
+
+.profile-header {
+  padding: 0.6rem;
+  background: linear-gradient(135deg, #0070ba, #004d7a);
+  color: white;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.2rem;
+}
+
+.profile-role {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+.logout-btn {
+  color: var(--sc-text-light) !important;
+  transition: all 0.2s ease;
+  padding: 0.75rem 1rem; /* Increased padding for better button feel */
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 0.9rem; /* Slightly larger font */
+  font-weight: 500; /* Added font weight */
+  cursor: pointer !important; /* Force cursor to show as pointer */
+  border-radius: 6px; /* Added border radius */
+  margin: 0.25rem; /* Added margin for spacing */
+}
+
+/* Ensure logout button shows hand cursor on all states */
+.logout-btn:hover,
+.logout-btn:focus,
+.logout-btn:active {
+  cursor: pointer !important;
+}
+
+.logout-btn:hover {
+  background: rgba(220, 53, 69, 0.15) !important; /* Stronger background */
+  color: #dc3545 !important;
+  transform: translateX(2px); /* Slight slide effect */
+  box-shadow: 0 2px 4px rgba(220, 53, 69, 0.2); /* Added shadow */
+}
+
+.logout-btn:active {
+  background: rgba(220, 53, 69, 0.2) !important;
+  transform: translateX(1px);
+  box-shadow: 0 1px 2px rgba(220, 53, 69, 0.3);
+}
+
+.dropdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1040;
+  background: transparent; /* Click-catcher only */
+}
+
+/* Subtle dropdown entrance */
+@keyframes sc-dropdown-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ensure positioned correctly within profile-menu */
+.profile-menu { position: relative; }

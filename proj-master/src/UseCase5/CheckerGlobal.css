@@ -1,0 +1,224 @@
+/* Global Checker Styles - CSS Variables and Base Styles */
+
+:root {
+  /* Standard Chartered Colors */
+  --sc-blue: #00a3e0;
+  --sc-deep: #004d7a;
+  --sc-green: #00a859;
+  --sc-text: #2c3e50;
+  --sc-text-light: #6c757d;
+  --sc-light: #f8f9fa;
+  --sc-border: #e9ecef;
+  
+  /* Shadows */
+  --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-heavy: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Global App Shell */
+.app-shell {
+  min-height: 100vh;
+  background: #f8f9fa;
+  /* Hide scrollbar for app shell while preserving scroll */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.app-shell::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Global Typography */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--sc-text);
+  background: #f8f9fa;
+  /* Hide scrollbar on body (Firefox/IE/Edge legacy) */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar but keep scroll for body (WebKit) */
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Global Button Styles */
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--sc-blue);
+  border-color: var(--sc-blue);
+}
+
+.btn-primary:hover {
+  background: var(--sc-deep);
+  border-color: var(--sc-deep);
+}
+
+.btn-success {
+  background: var(--sc-green);
+  border-color: var(--sc-green);
+}
+
+.btn-outline-primary {
+  color: var(--sc-blue);
+  border-color: var(--sc-blue);
+}
+
+.btn-outline-primary:hover {
+  background: var(--sc-blue);
+  border-color: var(--sc-blue);
+}
+
+/* Primary CTA button (checker theme) */
+.app-shell .btn-primary-custom {
+  background: linear-gradient(135deg, var(--sc-blue) 0%, var(--sc-deep) 100%);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: #ffffff;
+}
+
+.app-shell .btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 163, 224, 0.35);
+  color: #ffffff;
+}
+
+.btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background: #dc3545;
+  border-color: #dc3545;
+}
+
+/* Global Form Styles */
+.form-control,
+.form-select {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--sc-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 163, 224, 0.25);
+}
+
+/* Global Card Styles */
+.card {
+  border: 1px solid var(--sc-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+}
+
+/* Global Table Styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  background: var(--sc-light);
+  border-bottom: 2px solid var(--sc-border);
+  font-weight: 600;
+  color: var(--sc-text);
+  padding: 1rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.table td {
+  padding: 1rem 0.75rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 163, 224, 0.05);
+}
+
+/* Global Badge Styles */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Global Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Global Text Colors */
+.text-primary {
+  color: var(--sc-blue) !important;
+}
+
+.text-success {
+  color: var(--sc-green) !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+.text-muted {
+  color: var(--sc-text-light) !important;
+}
+
+/* Global Background Colors */
+.bg-primary {
+  background-color: var(--sc-blue) !important;
+}
+
+.bg-success {
+  background-color: var(--sc-green) !important;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+/* Global Border Colors */
+.border-primary {
+  border-color: var(--sc-blue) !important;
+}
+
+.border-success {
+  border-color: var(--sc-green) !important;
+}
+
+.border-danger {
+  border-color: #dc3545 !important;
+}
+
+.border-warning {
+  border-color: #ffc107 !important;
+}

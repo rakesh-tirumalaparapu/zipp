@@ -1,0 +1,46 @@
+.notifications-page-hero { height: 120px; background: linear-gradient(135deg, var(--sc-blue), var(--sc-deep)); border-radius: 12px; }
+.notifications-page-hero .sub { opacity: 0.9; }
+
+/* Constrain page width slightly so it doesn't touch sidebar/edges */
+.notif-container { max-width: calc(100% - 36px); margin-left: 18px; margin-right: 18px; }
+
+/* Card container */
+.section-card {
+  background: #fff;
+  border: 1px solid #e7eef6;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* List layout */
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Item card */
+.notification-item {
+  background: #fff;
+  border: 1px solid #e7eef6;
+  border-radius: 10px;
+  padding: 12px 14px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.notification-item:hover {
+  border-color: #cfe0f2;
+  box-shadow: 0 2px 10px rgba(13, 110, 253, 0.05);
+}
+
+/* Icon */
+.notification-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f9ff;
+  border: 1px solid #e1f0ff;
+}

@@ -1,0 +1,59 @@
+/* Global Styles */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
+} */
+
+/* Updated Color Variables */
+/* :root {
+  --primary-green: #38D200;
+  --primary-blue: #0473EA;
+  --secondary-green: #2EB800;
+  --secondary-blue: #0368D4;
+  --light-green: #E8F7E3;
+  --light-blue: #E8F2FE;
+  --dark-gray: #2D3748;
+  --medium-gray: #4A5568;
+  --light-gray: #F7FAFC;
+  --border-gray: #E2E8F0;
+  --gold: #D4AF37;
+  --silver: #C0C0C0;
+  --bronze: #CD7F32;
+} */
+
+/* Main Content Styles */
+.main-content {
+  margin-top: 0;
+  padding-top: 0;
+  overflow-x: hidden;
+}
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Primary CTA button (UseCase1 theme) */
+.App .btn-primary-custom {
+  background: linear-gradient(135deg, #0473EA 0%, #0368D4 100%);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: #ffffff;
+}
+
+.App .btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(4, 115, 234, 0.35);
+  color: #ffffff;
+}

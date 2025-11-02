@@ -1,0 +1,101 @@
+/* components/ApplicationReview/CibilSection/CibilSection.css */
+
+.cibil-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+.cibil-score {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.score-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #e6f2ff; /* light SCB blue */
+  box-shadow: inset 0 0 10px rgba(0, 51, 102, 0.1);
+  text-align: center;
+}
+
+.score {
+  font-size: 28px;
+  font-weight: 700;
+  color: #003366; /* SCB deep blue */
+}
+
+.score-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+  margin-top: 4px;
+}
+
+.score-ranges {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 180px;
+  margin-left: 24px;
+}
+
+.score-range {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f7fa;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.range-label {
+  font-weight: 500;
+  color: #003366;
+  font-size: 14px;
+}
+
+.range-value {
+  font-weight: 600;
+  color: #28a745; /* green for positive score */
+}
+
+.range-value:contains('<650') {
+  color: #dc3545; /* red for poor/fair score */
+}
+
+.score-update {
+  font-size: 13px;
+  color: #777777;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .cibil-score {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .score-ranges {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .score-range {
+    justify-content: space-between;
+  }
+}

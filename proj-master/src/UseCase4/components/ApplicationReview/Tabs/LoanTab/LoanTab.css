@@ -1,0 +1,153 @@
+/* components/ApplicationReview/Tabs/LoanTab/LoanTab.css */
+
+.tab-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Arial', sans-serif;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #003366; /* SCB Deep Blue */
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 6px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px 20px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f7fa;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+.info-item label {
+  font-weight: 500;
+  color: #003366;
+  font-size: 14px;
+}
+
+.info-item span {
+  font-weight: 600;
+  color: #003366;
+  font-size: 14px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.status.approved {
+  background-color: #e6f7ed;
+  color: #2d8c50;
+}
+
+.status.pending {
+  background-color: #fffbe6;
+  color: #d39e00;
+}
+
+.status.rejected {
+  background-color: #fde7e7;
+  color: #b02a37;
+}
+
+.existing-loans {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loan-item {
+  background-color: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.loan-header h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #003366;
+  margin-bottom: 12px;
+}
+
+.document-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checklist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #f5f7fa;
+  border-radius: 8px;
+}
+
+.checklist-status {
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.checklist-status.verified {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.checklist-status.pending {
+  background-color: #ffc107;
+  color: #000000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .info-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .loan-item {
+    padding: 12px;
+  }
+
+  .section h3 {
+    font-size: 16px;
+  }
+}

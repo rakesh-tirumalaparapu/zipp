@@ -1,0 +1,82 @@
+.comments-tab {
+  padding: 20px 0;
+}
+
+.comments-tab h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comment-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  transition: all 0.2s;
+}
+
+.comment-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.comment-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #3b82f6;
+  font-size: 0.95rem;
+}
+
+.comment-time {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.comment-type-badge {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.comment-type-badge.info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.comment-type-badge.success {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.comment-type-badge.warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.comment-content {
+  color: #1f2937;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+

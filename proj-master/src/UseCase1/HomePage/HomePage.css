@@ -1,0 +1,239 @@
+/* ==============================
+   🎠 CAROUSEL STYLING
+============================== */
+.home-page #mainCarousel {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.home-page .carousel {
+  margin-top: 0;
+}
+
+.home-page .carousel-inner {
+  margin-top: 0;
+}
+
+.home-page .carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+
+/* ==============================
+   ✨ UNIVERSAL CARD DESIGN
+   (Professional Clean Look)
+============================== */
+
+.feature-card,
+.loan-detail-card,
+.apply-step-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  padding: 2rem 1.5rem;
+}
+
+/* 🔹 Subtle hover lift with border gradient */
+.feature-card::after,
+.loan-detail-card::after,
+.apply-step-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, #007bff, #00b894) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.feature-card:hover::after,
+.loan-detail-card:hover::after,
+.apply-step-card:hover::after {
+  opacity: 1;
+}
+
+/* ✨ Professional Lift Effect */
+.feature-card:hover,
+.loan-detail-card:hover,
+.apply-step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 🩶 Icon animation (gentle bounce) */
+.feature-card .display-5,
+.loan-detail-card .detail-icon,
+.apply-step-card .step-number {
+  font-size: 2.8rem;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .display-5,
+.loan-detail-card:hover .detail-icon,
+.apply-step-card:hover .step-number {
+  transform: translateY(-4px);
+}
+
+/* 🩶 Card Text Styling */
+.feature-card h5,
+.loan-detail-card h4,
+.apply-step-card h4 {
+  font-weight: 700;
+  color: #111;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p,
+.loan-detail-card p,
+.apply-step-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==============================
+   📊 SECTION STYLES
+============================== */
+
+/* WHY CHOOSE SECTION */
+section.container.text-center.py-5 {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+section.container.text-center.py-5 h2 {
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+section.container.text-center.py-5 p {
+  color: #555;
+}
+
+/* LOAN DETAILS SECTION */
+.loan-details-section {
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.loan-details-section h1 {
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.loan-details-section .section-subtitle {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* INTEREST RATES TABLE */
+.rates-table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.rates-table thead {
+  background: linear-gradient(135deg, #007bff, #00b894);
+  color: white;
+  font-weight: 600;
+}
+
+.rates-table tbody tr:hover {
+  background: rgba(0, 123, 255, 0.05);
+  transition: background 0.3s ease;
+}
+
+/* HOW TO APPLY SECTION */
+.how-to-apply-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.how-to-apply-section h1 {
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.how-to-apply-section .section-subtitle {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Step number circle */
+.apply-step-card .step-number {
+  background: #007bff;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+.apply-step-card:hover .step-number {
+  background: #00b894;
+  box-shadow: 0 6px 15px rgba(0, 184, 148, 0.4);
+}
+
+/* ==============================
+   🌍 RESPONSIVE DESIGN
+============================== */
+@media (max-width: 768px) {
+  .feature-card,
+  .loan-detail-card,
+  .apply-step-card {
+    margin-bottom: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .feature-card .display-5,
+  .loan-detail-card .detail-icon,
+  .apply-step-card .step-number {
+    font-size: 2.2rem;
+  }
+
+  .loan-details-section,
+  .how-to-apply-section {
+    padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h1,
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .apply-step-card .step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}

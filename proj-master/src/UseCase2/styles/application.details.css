@@ -1,0 +1,161 @@
+/* Application Details page specific styles */
+
+.usecase2 .details-header {
+  border: 1px solid #e5e7eb;
+}
+
+/* Grid spacing between sections */
+.usecase2 .details-grid {
+  margin-top: 8px;
+  row-gap: 8px; /* keep vertical gaps tight */
+}
+
+/* Section card tweaks */
+.usecase2 .details-section .card-title {
+  font-weight: 600;
+}
+
+/* Remove generic stacked spacing; we'll control specific sections */
+.usecase2 .details-section { margin-bottom: 0; }
+
+/* Profile field rows */
+.usecase2 .profile-field {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+/* Labels & values */
+.usecase2 .profile-label { color: #64748b; font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
+.usecase2 .profile-value { color: #1f2937; font-size: 1rem; font-weight: 500; }
+
+/* Arrange label and value in one line for details grids */
+.usecase2 .details-section .row.row-cols-1.row-cols-md-2 > .col {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px 0;
+  border-bottom: 1px solid #eef2f7;
+  min-width: 0; /* allow children to shrink without overflowing */
+}
+.usecase2 .details-section .row.row-cols-1.row-cols-md-2 > .col .profile-label {
+  margin: 0;
+  flex: 0 0 40%; /* narrower label to give value more room */
+  min-width: 0;
+}
+.usecase2 .details-section .row.row-cols-1.row-cols-md-2 > .col .profile-value {
+  margin: 0;
+  flex: 1 1 auto;
+  text-align: left;
+  min-width: 0;
+  overflow-wrap: anywhere; /* wrap long emails etc. */
+}
+
+/* Documents grid */
+.usecase2 .docs-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 576px) {
+  .usecase2 .docs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 992px) {
+  .usecase2 .docs-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.usecase2 .doc-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.usecase2 .doc-item .doc-label { flex: 1; font-weight: 500; color: #334155; }
+
+.usecase2 .doc-item .doc-status { font-size: 0.85rem; padding: 4px 8px; border-radius: 9999px; }
+.usecase2 .doc-item .doc-status.ok { background: #d1e7dd; color: #0f5132; }
+.usecase2 .doc-item .doc-status.missing { background: #f3f4f6; color: #6b7280; }
+
+/* Widen the container that holds the details */
+.usecase2 .details-page {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Add visible gap before Documents Uploaded only */
+.usecase2 .details-docs { margin-top: 18px; }
+
+/* Make cards a bit smaller within their columns to emphasize gaps */
+.usecase2 .details-grid .col-lg-6 > .card { margin-left: 8px; margin-right: 8px; }
+.usecase2 .details-grid .col-12 > .card { margin-left: 8px; margin-right: 8px; }
+
+/* Actions layout */
+.usecase2 .details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+.usecase2 .details-action { min-width: 180px; }
+.usecase2 .details-actions-card .card-body { padding-top: 20px; padding-bottom: 20px; }
+
+/* Header actions (Download PDF, Edit & Resubmit) - stacked vertically */
+.usecase2 .details-header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+.usecase2 .details-header-action { min-width: 200px; }
+@media (max-width: 576px) {
+  .usecase2 .details-header-actions { align-items: stretch; }
+  .usecase2 .details-header-action { width: 100%; }
+}
+
+/* Add shadows to card bodies */
+.usecase2 .card-body {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Tab styles for Customer Application Details */
+.usecase2 .application-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0;
+}
+
+.usecase2 .tab-button {
+  border: none;
+  background: none;
+  padding: 12px 24px;
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.usecase2 .tab-button:hover {
+  color: #2563eb;
+  background: #f0f9ff;
+}
+
+.usecase2 .tab-button.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+  font-weight: 600;
+}
+
+.usecase2 .tab-button i {
+  margin-right: 6px;
+}

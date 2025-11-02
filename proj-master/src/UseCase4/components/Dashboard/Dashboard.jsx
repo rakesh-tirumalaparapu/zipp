@@ -70,8 +70,12 @@ const Dashboard = ({
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h2>Loan Applications Dashboard</h2>
-        <p>Manage and review all loan applications</p>
+      <div className="page-hero d-flex align-items-center justify-content-center mb-4">
+        <div className="text-center text-white">
+          <h4 className="mb-1">Application Review Dashboard</h4>
+          <p className="sub mb-0">Review and process loan applications</p>
+        </div>
+      </div>
         <div className="row mt-3">
           <div className="col-md-3 mb-3">
             <button className={`card card-custom text-center p-3 w-100 ${applicationFilter === 'Pending' ? 'kpi-card-selected' : ''}`} onClick={()=>setApplicationFilter('Pending')}>

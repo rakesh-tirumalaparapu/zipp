@@ -136,7 +136,7 @@ function Login() {
 
             {/* Submit Button */}
             <button type="submit" className="submit-btn" disabled={submitting}>
-              <span className="lock-icon">🔒</span> LOGIN
+              {submitting ? 'Logging in...' : <><span className="lock-icon">🔒</span> LOGIN</>}
             </button>
           </form>
 

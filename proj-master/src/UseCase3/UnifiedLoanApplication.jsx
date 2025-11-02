@@ -337,7 +337,12 @@ export default function UnifiedLoanApplication({ onSubmit, initialData, existing
       error = validateAadhaar(value);
     } else if (name === 'phone' || name === 'ref1Contact' || name === 'ref2Contact') {
       error = validatePhone(value);
-    } else if (['firstName', 'lastName', 'middleName', 'fatherName', 'ref1Name', 'ref2Name'].includes(name)) {
+    } else if (name === 'middleName') {
+      // Middle name is optional - only validate format if provided
+      if (value && !/^[a-zA-Z\s]+$/.test(value)) {
+        error = 'Middle name must contain only letters and spaces';
+      }
+    } else if (['firstName', 'lastName', 'fatherName', 'ref1Name', 'ref2Name'].includes(name)) {
       error = validateLettersOnly(value, name.replace(/([A-Z])/g, ' $1').replace(/^./, c => c.toUpperCase()));
     } else if (name === 'age') {
       error = validateAge(value);
@@ -1351,7 +1356,7 @@ export default function UnifiedLoanApplication({ onSubmit, initialData, existing
                 label="Marital status" 
                 name="maritalStatus" 
                 as="select" 
-                options={["Single", "Married", "Divorced", "Widowed"]} 
+                options={["Single", "Married", "Divorced"]} 
                 formData={formData}
                 errors={errors}
                 handleFieldChange={handleFieldChange}

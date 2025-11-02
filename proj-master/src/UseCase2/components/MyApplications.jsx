@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/customer.base.css';
 import { formatLoanType } from '../../utils/enumFormatters';
 
-const MyApplications = ({ applications }) => {
+const MyApplications = ({ applications, onRefresh }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [filteredApplications, setFilteredApplications] = useState(applications);
@@ -20,8 +20,12 @@ const MyApplications = ({ applications }) => {
         setShowSuccessMessage(false);
       }, 5000);
       navigate(location.pathname, { replace: true });
+      // Refresh applications list when coming from successful submission
+      if (onRefresh && typeof onRefresh === 'function') {
+        onRefresh();
+      }
     }
-  }, [location.state, navigate, location.pathname]);
+  }, [location.state, navigate, location.pathname, onRefresh]);
 
   useEffect(() => {
     let filtered = applications;

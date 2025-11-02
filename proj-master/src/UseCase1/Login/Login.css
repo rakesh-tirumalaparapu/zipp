@@ -132,9 +132,16 @@
 
 .login-page .back-btn:hover {
   background: var(--primary-blue);
-  /* color: white; */
+  color: white !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(4, 115, 234, 0.2);
+}
+
+.login-page .back-btn:active,
+.login-page .back-btn:focus {
+  background: var(--primary-blue);
+  color: white !important;
+  outline: none;
 }
 
 /* Login Form Styles */

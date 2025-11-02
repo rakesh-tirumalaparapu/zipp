@@ -10,11 +10,13 @@ import ForgotPassword from './ForgotPassword/ForgotPassword';
 import ResetPassword from './ResetPassword/ResetPassword';
 import EligibilityChecker from './EligibilityChecker/EligibilityChecker';
 import Footer from './Footer/Footer';
+import ScrollToTop from './ScrollToTop';
 import './Main.css';
 
 function Main() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
       <main className="main-content">
         <Routes>

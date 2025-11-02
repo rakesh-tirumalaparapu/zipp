@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
@@ -80,6 +80,16 @@ function Customer() {
     }
     return normalized;
   };
+
+  const loadApplications = useCallback(async () => {
+    try {
+      const apps = await listCustomerApplications();
+      const rows = (apps || []).map(mapSummaryToUiRow);
+      setApplications(rows);
+    } catch (e) {
+      setApplications([]);
+    }
+  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -163,7 +173,7 @@ function Customer() {
           <Routes>
             <Route index element={<Navigate to="dashboard" replace />} />
             <Route path="dashboard" element={<Dashboard applications={applications} user={user} />} />
-            <Route path="applications" element={<MyApplications applications={applications} />} />
+            <Route path="applications" element={<MyApplications applications={applications} onRefresh={loadApplications} />} />
             <Route path="profile" element={<Profile user={user} setUser={setUser} />} />
             <Route path="application-details" element={<ApplicationDetails />} />
             <Route
